@@ -1,0 +1,51 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+
+const { blok } = Astro.props
+---
+
+<div {...storyblokEditable(blok)}>
+  <div class="clothing">
+    <h2>{blok.title}</h2>
+    <p>{blok.description}</p>
+    <a href="{blok.button}">Choose sponsoring plan</a>
+  </div>
+  <img src={blok.background?.filename} alt={blok.image?.alt}>
+</div>
+
+<style>
+
+  .clothing {
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+  }
+
+  img {
+    position: absolute;
+    z-index: 0;
+    left: 10px;
+    top: 940px;
+  }
+
+
+  h2 {
+    font-size: var(--h2);
+  }
+
+  a {
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    color: var(--dark-blue);
+  }
+
+</style>

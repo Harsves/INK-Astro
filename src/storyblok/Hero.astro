@@ -1,0 +1,47 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+import { renderRichText } from "@storyblok/astro";
+
+const { blok } = Astro.props
+const renderedDescription = renderRichText(blok.description)
+---
+
+<div {...storyblokEditable(blok)}>
+  <div class="hero">
+    <h1>{blok.headline}</h1>
+    <div set:html={renderedDescription}></div>
+  </div>
+  <img src={blok.background?.filename} alt={blok.image?.alt}>
+</div>
+
+<style>
+
+  .hero {
+    z-index: 20;
+    position: relative;
+  }
+
+  h1 {
+    position: relative;
+    color: var(--yellow);
+    font-size: var(--h1);
+    rotate: -10deg;
+    max-width: 150px;
+    margin: 40px auto;
+  }
+
+  div {
+    color: white;
+    width: 90%;
+    margin: auto;
+    font-size: var(--p);
+  }
+
+  img {
+    position: absolute;
+    top: 80px;
+    left: -90px;
+    z-index: 0;
+  }
+
+</style>

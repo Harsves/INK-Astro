@@ -1,0 +1,85 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+    <title>INK</title>
+  </head>
+  <body class='container mx-auto'>
+    <slot />
+  </body>
+</html>
+
+<style>
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    height: 100%;
+    background-color: var(--background);
+}
+  
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+} 
+  
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+  
+ol,
+ul {
+    list-style: none;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+* {   
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0;
+    line-height: 1.4;
+}
+
+:root {
+    /* Color */
+    --yellow: #FFDA1D;
+    --light-blue: #3DBAE1;
+    --dark-blue: #163A3A;
+    --background: #051A1A;
+  
+    /* Font */
+    
+
+    /* Font weight */
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+  
+    /* Fontsize */
+    --h1: 32px;
+    --h2: 26px;
+    --h3: 22px;
+    --h4: 20px;
+    --h5: 18px;
+    --h6: 16px;
+    --p: 16px;
+}
+
+</style>
