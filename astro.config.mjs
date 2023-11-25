@@ -11,7 +11,6 @@ const env = loadEnv('', process.cwd(), 'STORYBLOK');
 export default defineConfig({
   integrations: [storyblok({
     accessToken: env.STORYBLOK_TOKEN,
-    // accessToken: 'VDsIqgdaKldvjOOQa18nmwtt',
     apiOptions: {
       region: ''
     },
