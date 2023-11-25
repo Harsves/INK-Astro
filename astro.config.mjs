@@ -29,6 +29,8 @@ export default defineConfig({
       https: true
     }
   },
+  site: 'https://harsves.github.io',
+  base: '/INK-Astro',
   output: 'server',
   adapter: vercel(),
 });
